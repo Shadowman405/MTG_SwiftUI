@@ -17,7 +17,6 @@
 		BFC732BE2958ACC200C38248 /* Network Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732BD2958ACC200C38248 /* Network Manager.swift */; };
 		BFC732C02958ACE500C38248 /* Storage Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732BF2958ACE500C38248 /* Storage Network.swift */; };
 		BFC732C22958AD3D00C38248 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C12958AD3D00C38248 /* AlertController.swift */; };
-		BFC732C42958B58900C38248 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C32958B58900C38248 /* Categories.swift */; };
 		BFC732C62958C45C00C38248 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C52958C45C00C38248 /* CardsView.swift */; };
 		BFC732C92958C8C200C38248 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C82958C8C200C38248 /* CardCell.swift */; };
 		BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732CA2958C9FD00C38248 /* CardImage.swift */; };
@@ -36,7 +35,6 @@
 		BFC732BD2958ACC200C38248 /* Network Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Manager.swift"; sourceTree = "<group>"; };
 		BFC732BF2958ACE500C38248 /* Storage Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage Network.swift"; sourceTree = "<group>"; };
 		BFC732C12958AD3D00C38248 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		BFC732C32958B58900C38248 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		BFC732C52958C45C00C38248 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		BFC732C82958C8C200C38248 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		BFC732CA2958C9FD00C38248 /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			children = (
 				BFC732B82958AC1A00C38248 /* Card.swift */,
 				BFC732BA2958AC6B00C38248 /* Collection.swift */,
-				BFC732C32958B58900C38248 /* Categories.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,7 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */,
-				BFC732C42958B58900C38248 /* Categories.swift in Sources */,
 				BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */,
 				BFC732BE2958ACC200C38248 /* Network Manager.swift in Sources */,
 				BFC732C62958C45C00C38248 /* CardsView.swift in Sources */,
