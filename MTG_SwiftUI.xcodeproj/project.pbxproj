@@ -19,6 +19,8 @@
 		BFC732C22958AD3D00C38248 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C12958AD3D00C38248 /* AlertController.swift */; };
 		BFC732C42958B58900C38248 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C32958B58900C38248 /* Categories.swift */; };
 		BFC732C62958C45C00C38248 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C52958C45C00C38248 /* CardsView.swift */; };
+		BFC732C92958C8C200C38248 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C82958C8C200C38248 /* CardCell.swift */; };
+		BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732CA2958C9FD00C38248 /* CardImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BFC732C12958AD3D00C38248 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		BFC732C32958B58900C38248 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		BFC732C52958C45C00C38248 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		BFC732C82958C8C200C38248 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		BFC732CA2958C9FD00C38248 /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
 		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,12 +93,10 @@
 		BFC732A82958A88B00C38248 /* MTG_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BFC732C72958C85200C38248 /* Views */,
 				BFC732BC2958ACA400C38248 /* Support Managers */,
 				BFC732B72958AC0B00C38248 /* Model */,
 				BFC732A92958A88B00C38248 /* MTG_SwiftUIApp.swift */,
-				BFC732AB2958A88B00C38248 /* ContentView.swift */,
-				BFC732C52958C45C00C38248 /* CardsView.swift */,
-				BFC732C12958AD3D00C38248 /* AlertController.swift */,
 				BFC732AD2958A88C00C38248 /* Assets.xcassets */,
 				BFC732AF2958A88C00C38248 /* Preview Content */,
 			);
@@ -124,8 +126,20 @@
 			children = (
 				BFC732BD2958ACC200C38248 /* Network Manager.swift */,
 				BFC732BF2958ACE500C38248 /* Storage Network.swift */,
+				BFC732CA2958C9FD00C38248 /* CardImage.swift */,
 			);
 			path = "Support Managers";
+			sourceTree = "<group>";
+		};
+		BFC732C72958C85200C38248 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFC732AB2958A88B00C38248 /* ContentView.swift */,
+				BFC732C52958C45C00C38248 /* CardsView.swift */,
+				BFC732C12958AD3D00C38248 /* AlertController.swift */,
+				BFC732C82958C8C200C38248 /* CardCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,9 +258,11 @@
 			files = (
 				BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */,
 				BFC732C42958B58900C38248 /* Categories.swift in Sources */,
+				BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */,
 				BFC732BE2958ACC200C38248 /* Network Manager.swift in Sources */,
 				BFC732C62958C45C00C38248 /* CardsView.swift in Sources */,
 				BFC732B92958AC1A00C38248 /* Card.swift in Sources */,
+				BFC732C92958C8C200C38248 /* CardCell.swift in Sources */,
 				BFC732C02958ACE500C38248 /* Storage Network.swift in Sources */,
 				BFC732C22958AD3D00C38248 /* AlertController.swift in Sources */,
 				BFC732AA2958A88B00C38248 /* MTG_SwiftUIApp.swift in Sources */,
