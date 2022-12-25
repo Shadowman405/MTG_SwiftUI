@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F7F83C7E10400EDB12FCC65 /* Pods_MTG_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B031C0EA45323F0A8D078F2 /* Pods_MTG_SwiftUI.framework */; };
 		BFC732AA2958A88B00C38248 /* MTG_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732A92958A88B00C38248 /* MTG_SwiftUIApp.swift */; };
 		BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732AB2958A88B00C38248 /* ContentView.swift */; };
 		BFC732AE2958A88C00C38248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC732AD2958A88C00C38248 /* Assets.xcassets */; };
 		BFC732B12958A88C00C38248 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC732B02958A88C00C38248 /* Preview Assets.xcassets */; };
+		BFC732B92958AC1A00C38248 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732B82958AC1A00C38248 /* Card.swift */; };
+		BFC732BB2958AC6B00C38248 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732BA2958AC6B00C38248 /* Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DA66DA43D45576CDB68D01C /* Pods-MTG_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		5B031C0EA45323F0A8D078F2 /* Pods_MTG_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC732A62958A88B00C38248 /* MTG_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTG_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC732A92958A88B00C38248 /* MTG_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_SwiftUIApp.swift; sourceTree = "<group>"; };
 		BFC732AB2958A88B00C38248 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BFC732AD2958A88C00C38248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFC732B02958A88C00C38248 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BFC732B82958AC1A00C38248 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BFC732BA2958AC6B00C38248 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7F83C7E10400EDB12FCC65 /* Pods_MTG_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ADC02318A0B241F3C4D59C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */,
+				3DA66DA43D45576CDB68D01C /* Pods-MTG_SwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A77F2C74C94CA3B710E82BA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B031C0EA45323F0A8D078F2 /* Pods_MTG_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFC7329D2958A88B00C38248 = {
 			isa = PBXGroup;
 			children = (
 				BFC732A82958A88B00C38248 /* MTG_SwiftUI */,
 				BFC732A72958A88B00C38248 /* Products */,
+				3ADC02318A0B241F3C4D59C4 /* Pods */,
+				A77F2C74C94CA3B710E82BA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +79,7 @@
 		BFC732A82958A88B00C38248 /* MTG_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BFC732B72958AC0B00C38248 /* Model */,
 				BFC732A92958A88B00C38248 /* MTG_SwiftUIApp.swift */,
 				BFC732AB2958A88B00C38248 /* ContentView.swift */,
 				BFC732AD2958A88C00C38248 /* Assets.xcassets */,
@@ -67,6 +96,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BFC732B72958AC0B00C38248 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFC732B82958AC1A00C38248 /* Card.swift */,
+				BFC732BA2958AC6B00C38248 /* Collection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFC732B42958A88C00C38248 /* Build configuration list for PBXNativeTarget "MTG_SwiftUI" */;
 			buildPhases = (
+				935141CAF63EC06FAD70DB75 /* [CP] Check Pods Manifest.lock */,
 				BFC732A22958A88B00C38248 /* Sources */,
 				BFC732A32958A88B00C38248 /* Frameworks */,
 				BFC732A42958A88B00C38248 /* Resources */,
+				3DEDECC08DAA1859955ABD58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +172,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DEDECC08DAA1859955ABD58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935141CAF63EC06FAD70DB75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MTG_SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFC732A22958A88B00C38248 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */,
+				BFC732B92958AC1A00C38248 /* Card.swift in Sources */,
 				BFC732AA2958A88B00C38248 /* MTG_SwiftUIApp.swift in Sources */,
+				BFC732BB2958AC6B00C38248 /* Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +345,7 @@
 		};
 		BFC732B52958A88C00C38248 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +375,7 @@
 		};
 		BFC732B62958A88C00C38248 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA66DA43D45576CDB68D01C /* Pods-MTG_SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

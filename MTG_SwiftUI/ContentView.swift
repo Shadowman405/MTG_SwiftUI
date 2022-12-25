@@ -10,10 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ZStack {
+                Image("mtg_green")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .border(Color.orange)
+                    .clipped()
+                VStack {
+                    Text("Cards")
+                        .foregroundColor(.orange)
+                        .padding()
+                    Text("My Collections")
+                        .foregroundColor(.orange)
+                        .padding()
+                    Text("Health Counter")
+                        .foregroundColor(.orange)
+                        .padding()
+                }
+            }
         }
         .padding()
     }
