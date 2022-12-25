@@ -8,28 +8,49 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
+        NavigationView {
             ZStack {
                 Image("mtg_green")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .border(Color.orange)
-                    .clipped()
+//                NavigationView {
+//                    List(storageManager.categories, id: \.id){
+//                        category in
+//                        Text(category.name)
+//                    }
+//                }
                 VStack {
-                    Text("Cards")
-                        .foregroundColor(.orange)
-                        .padding()
-                    Text("My Collections")
-                        .foregroundColor(.orange)
-                        .padding()
-                    Text("Health Counter")
-                        .foregroundColor(.orange)
-                        .padding()
+                    // To Cards
+                    NavigationLink {
+                        CardsView()
+                    } label: {
+                        Text("Cards")
+                            .foregroundColor(.orange)
+                    }
+                    .padding()
+                    // To collections
+                    NavigationLink {
+                        CardsView()
+                    } label: {
+                        Text("Collections")
+                            .foregroundColor(.orange)
+                    }
+                    .padding()
+                    // To HP Counter
+                    NavigationLink {
+                        CardsView()
+                    } label: {
+                        Text("Health Counter")
+                            .foregroundColor(.orange)
+                    }
+                    .padding()
                 }
             }
+            .padding()
         }
-        .padding()
+        
     }
 }
 
@@ -38,3 +59,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

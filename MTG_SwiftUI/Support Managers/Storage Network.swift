@@ -8,12 +8,13 @@
 import Foundation
 import RealmSwift
 
-class StorageManager {
+class StorageManager: ObservableObject {
     static let shared = StorageManager()
+    @Published var categories = [Category(id: 0, name: "Cards"), Category(id: 1, name: "Cards Collection"), Category(id: 2, name: "Health Counter")]
     
     let realm = try! Realm()
     
-    private init() {}
+    init() {}
     
     //MARK: - Save/delete collection
     func save(cardCollection: [CardCollection]) {
