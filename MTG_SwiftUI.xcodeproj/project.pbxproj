@@ -14,6 +14,8 @@
 		BFC732B12958A88C00C38248 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC732B02958A88C00C38248 /* Preview Assets.xcassets */; };
 		BFC732B92958AC1A00C38248 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732B82958AC1A00C38248 /* Card.swift */; };
 		BFC732BB2958AC6B00C38248 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732BA2958AC6B00C38248 /* Collection.swift */; };
+		BFC732BE2958ACC200C38248 /* Network Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732BD2958ACC200C38248 /* Network Manager.swift */; };
+		BFC732C02958ACE500C38248 /* Storage Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732BF2958ACE500C38248 /* Storage Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BFC732B02958A88C00C38248 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFC732B82958AC1A00C38248 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BFC732BA2958AC6B00C38248 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		BFC732BD2958ACC200C38248 /* Network Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Manager.swift"; sourceTree = "<group>"; };
+		BFC732BF2958ACE500C38248 /* Storage Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage Network.swift"; sourceTree = "<group>"; };
 		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,7 @@
 		BFC732A82958A88B00C38248 /* MTG_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BFC732BC2958ACA400C38248 /* Support Managers */,
 				BFC732B72958AC0B00C38248 /* Model */,
 				BFC732A92958A88B00C38248 /* MTG_SwiftUIApp.swift */,
 				BFC732AB2958A88B00C38248 /* ContentView.swift */,
@@ -103,6 +108,15 @@
 				BFC732BA2958AC6B00C38248 /* Collection.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BFC732BC2958ACA400C38248 /* Support Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BFC732BD2958ACC200C38248 /* Network Manager.swift */,
+				BFC732BF2958ACE500C38248 /* Storage Network.swift */,
+			);
+			path = "Support Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */,
+				BFC732BE2958ACC200C38248 /* Network Manager.swift in Sources */,
 				BFC732B92958AC1A00C38248 /* Card.swift in Sources */,
+				BFC732C02958ACE500C38248 /* Storage Network.swift in Sources */,
 				BFC732AA2958A88B00C38248 /* MTG_SwiftUIApp.swift in Sources */,
 				BFC732BB2958AC6B00C38248 /* Collection.swift in Sources */,
 			);
