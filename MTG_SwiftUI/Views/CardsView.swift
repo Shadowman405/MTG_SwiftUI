@@ -9,7 +9,17 @@ import SwiftUI
 
 struct CardsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AsyncImage(url: URL(string: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"), transaction: Transaction(animation: .easeInOut)) { phase in
+            if let image = phase.image {
+                image
+                    .resizable()
+                    .frame(width: 150, height: 200)
+            } else {
+                Image("mr224_back")
+                    .resizable()
+                    .frame(width: 150, height: 200)
+            }
+        }
     }
 }
 
