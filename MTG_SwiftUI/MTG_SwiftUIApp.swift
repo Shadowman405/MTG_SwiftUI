@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MTG_SwiftUIApp: App {
+    @StateObject var dataManager = NetworkManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataManager)
         }
     }
 }

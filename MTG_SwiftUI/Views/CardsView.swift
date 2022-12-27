@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct CardsView: View {
-    
-    private let manager = NetworkManager.shared
-    @State var cards: [CardMTG] = []
-    private let cardsUrl = "https://api.magicthegathering.io/v1/cards?page=311"
+    @EnvironmentObject var dataManager: NetworkManager
     
     var body: some View {
-        AsyncImage(url: URL(string: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"), transaction: Transaction(animation: .easeInOut)) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .frame(width: 150, height: 200)
-            } else {
-                Image("mr224_back")
-                    .resizable()
-                    .frame(width: 150, height: 200)
+        List(dataManager.cards, id: \.id) { card in
+            HStack {
+                AsyncImage(url: URL(string: card.imageURL), transaction: Transaction(animation: .easeInOut)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .frame(width: 150, height: 200)
+                    } else {
+                        Image("mr224_back")
+                            .resizable()
+                            .frame(width: 150, height: 200)
+                    }
+                }
+                Text(card.name)
             }
         }
     }
@@ -32,5 +34,6 @@ struct CardsView: View {
 struct CardsView_Previews: PreviewProvider {
     static var previews: some View {
         CardsView()
+            .environmentObject(NetworkManager())
     }
 }
