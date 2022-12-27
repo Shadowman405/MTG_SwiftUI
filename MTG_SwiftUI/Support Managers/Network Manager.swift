@@ -5,11 +5,13 @@
 //  Created by Maxim Mitin on 25.12.22.
 //
 
-import Foundation
+import SwiftUI
 import Alamofire
 import SwiftyJSON
 
-class NetworkManager {
+class NetworkManager: ObservableObject {
+    
+    @Published var cards: [CardMTG] = []
     
     static let shared = NetworkManager()
     let urlMTG = "https://api.magicthegathering.io/v1/cards?page=311"
@@ -29,6 +31,12 @@ class NetworkManager {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func fetchingCards(url: String) {
+        fetchCards(url: urlMTG) { card in
+            self.cards = card
         }
     }
 }

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct CardsView: View {
+    
+    private let manager = NetworkManager.shared
+    @State var cards: [CardMTG] = []
+    private let cardsUrl = "https://api.magicthegathering.io/v1/cards?page=311"
+    
     var body: some View {
         AsyncImage(url: URL(string: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"), transaction: Transaction(animation: .easeInOut)) { phase in
             if let image = phase.image {
@@ -21,6 +26,7 @@ struct CardsView: View {
             }
         }
     }
+    
 }
 
 struct CardsView_Previews: PreviewProvider {
