@@ -24,7 +24,6 @@ struct CardsView: View {
                             .frame(width: 150, height: 200)
                     }
                 }
-                //Text(card.name)
                 NavigationLink(destination: CardDetailView(card: card), label: {
                     Text("")
                 })

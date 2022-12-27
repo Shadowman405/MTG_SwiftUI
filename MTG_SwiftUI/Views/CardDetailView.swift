@@ -13,9 +13,6 @@ struct CardDetailView: View {
     
     var body: some View {
         VStack {
-            Text(card.name)
-                .padding()
-            
             AsyncImage(url: URL(string: card.imageURL), transaction: Transaction(animation: .easeInOut)) { phase in
                 if let image = phase.image {
                     image
@@ -35,6 +32,7 @@ struct CardDetailView: View {
             Text(card.text)
             
         }
+        .navigationTitle(card.name)
     }
 }
 
