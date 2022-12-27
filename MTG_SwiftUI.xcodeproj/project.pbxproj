@@ -20,6 +20,7 @@
 		BFC732C62958C45C00C38248 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C52958C45C00C38248 /* CardsView.swift */; };
 		BFC732C92958C8C200C38248 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732C82958C8C200C38248 /* CardCell.swift */; };
 		BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732CA2958C9FD00C38248 /* CardImage.swift */; };
+		BFC732CE295B73D000C38248 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732CD295B73D000C38248 /* CardDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		BFC732C82958C8C200C38248 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		BFC732CA2958C9FD00C38248 /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
 		BFC732CC295B6B3100C38248 /* MTG-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MTG-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BFC732CD295B73D000C38248 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 				BFC732C52958C45C00C38248 /* CardsView.swift */,
 				BFC732C12958AD3D00C38248 /* AlertController.swift */,
 				BFC732C82958C8C200C38248 /* CardCell.swift */,
+				BFC732CD295B73D000C38248 /* CardDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				BFC732B92958AC1A00C38248 /* Card.swift in Sources */,
 				BFC732C92958C8C200C38248 /* CardCell.swift in Sources */,
 				BFC732C02958ACE500C38248 /* Storage Network.swift in Sources */,
+				BFC732CE295B73D000C38248 /* CardDetailView.swift in Sources */,
 				BFC732C22958AD3D00C38248 /* AlertController.swift in Sources */,
 				BFC732AA2958A88B00C38248 /* MTG_SwiftUIApp.swift in Sources */,
 				BFC732BB2958AC6B00C38248 /* Collection.swift in Sources */,
