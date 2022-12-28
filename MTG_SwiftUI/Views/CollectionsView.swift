@@ -13,8 +13,15 @@ struct CollectionsView: View {
     var collections = StorageManager.shared.realm.objects(CardCollection.self)
     
     var body: some View {
-        ForEach(collections){ collection in
-            Text(collection.collectionName)
+        NavigationStack {
+            ForEach(collections){ collection in
+                Text(collection.collectionName)
+            }
+            .toolbar{
+                Button("+") {
+                    print("beep")
+                }
+            }
         }
     }
 }
