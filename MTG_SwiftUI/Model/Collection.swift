@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 
-class CardCollection: Object {
+class CardCollection: Object, Identifiable {
     @objc dynamic var collectionName = ""
     let cards = List<CardMTG>()
 }
