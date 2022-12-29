@@ -10,17 +10,16 @@ import RealmSwift
 
 struct CollectionsView: View {
     @EnvironmentObject var dataManager: StorageManager
-    var collections = StorageManager.shared.realm.objects(CardCollection.self)
+    @ObservedRealmObject var collections: CardCollectionUI
     
     var body: some View {
-        NavigationStack {
-            ForEach(collections){ collection in
-                Text(collection.collectionName)
-            }
-            .toolbar{
-                Button("+") {
-                    print("beep")
+        NavigationView {
+            List{
+                ForEach(collections.cards) { collection in
+                    Text(collection.name)
                 }
+                .onMove(perform: $collections.cards.move)
+                .onDelete(perform: $collections.cards.remove)
             }
         }
     }
@@ -29,7 +28,7 @@ struct CollectionsView: View {
 struct CollectionsView_Previews: PreviewProvider {
     static var previews: some View {
         
-        CollectionsView()
+        CollectionsView(collections: CardCollectionUI())
             .environmentObject(StorageManager())
     }
 }

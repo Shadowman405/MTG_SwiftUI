@@ -32,7 +32,7 @@ struct ContentView: View {
                     .padding()
                     // To collections
                     NavigationLink {
-                        CollectionsView()
+                        CollectionsView(collections: CardCollectionUI())
                     } label: {
                         Text("Collections")
                             .foregroundColor(.orange)
