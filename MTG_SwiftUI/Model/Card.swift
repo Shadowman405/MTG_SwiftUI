@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class CardMTG: Object, Codable {
+class CardMTG: Object, Codable, ObjectKeyIdentifiable {
     @objc dynamic var name: String
 //    let cmc: Int
 //    let colorIdentity: [String]
@@ -48,3 +48,20 @@ class CardMTG: Object, Codable {
     }
 }
 
+final class CardMTGUI: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var name: String = ""
+    @Persisted var type: String
+    @Persisted var rarity: String
+    @Persisted var setName: String
+    @Persisted var imageURL: String
+    @Persisted var manaCost: String
+    @Persisted var text: String
+//    let foreignNames: [ForeignName]
+//    let printings: [String]
+    @Persisted var originalType: String
+//    let legalities: [LegalityElement]
+    //@Persisted var id: String
+    
+    @Persisted(originProperty: "cards") var group: LinkingObjects<CardCollectionUI>
+}

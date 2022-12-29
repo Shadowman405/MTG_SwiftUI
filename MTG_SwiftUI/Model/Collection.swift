@@ -13,3 +13,10 @@ class CardCollection: Object, Identifiable {
     @objc dynamic var collectionName = ""
     let cards = List<CardMTG>()
 }
+
+
+
+final class CardCollectionUI: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var cards = RealmSwift.List<CardMTGUI>()
+}
