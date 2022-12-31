@@ -22,8 +22,8 @@ struct CardsInCollectionView: View {
                 .onDelete(perform: $collection.cards.remove)
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Cards", displayMode: .large)
-            .navigationBarBackButtonHidden(false)
+            .navigationBarTitle("Cards in " + collection.collectionName, displayMode: .large)
+            //.navigationBarBackButtonHidden(false)
             .navigationBarItems(trailing: EditButton())
         }
     }

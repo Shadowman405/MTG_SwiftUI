@@ -17,12 +17,17 @@ struct CollectionsView: View {
     var body: some View {
         NavigationView {
             List(collections, id: \.id){ collection in
-                Text(collection.collectionName)
+                HStack {
+                    Text(collection.collectionName)
+                    NavigationLink(destination: CardsInCollectionView(collection: collection)) {
+                        Text("")
+                    }
+                }
             }
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle("Collections", displayMode: .large)
-        .navigationBarBackButtonHidden(false)
+        //.navigationBarBackButtonHidden(false)
         .navigationBarItems(trailing: EditButton())
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
