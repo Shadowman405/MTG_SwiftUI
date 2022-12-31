@@ -10,6 +10,8 @@ import RealmSwift
 
 struct CollectionsView: View {
     //@EnvironmentObject var dataManager: StorageManager
+    @State private var presentAlert = false
+    @State private var collectionName = ""
     @ObservedResults(CardCollectionUI.self) var collections
     
     var body: some View {
@@ -25,11 +27,21 @@ struct CollectionsView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    $collections.append(CardCollectionUI())
-                } label: {
+                    presentAlert = true
+                    //$collections.append(CardCollectionUI())
+                }
+            label: {
                     Image(systemName: "plus")
                 }
-
+            .alert("Add", isPresented: $presentAlert) {
+                TextField("Collection Name", text: $collectionName)
+                
+                Button("Add", action: {
+                    var collName = CardCollectionUI(value: [$collectionName.wrappedValue])
+                    $collections.append(collName)
+                })
+                Button("Cancel", role: .cancel, action: {})
+            }
             }
         }
     }

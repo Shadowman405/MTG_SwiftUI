@@ -17,7 +17,7 @@ class CardCollection: Object, Identifiable {
 
 
 final class CardCollectionUI: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var _id: ObjectId
+    //@Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var collectionName = ""
     @Persisted var cards = RealmSwift.List<CardMTGUI>()
 }
