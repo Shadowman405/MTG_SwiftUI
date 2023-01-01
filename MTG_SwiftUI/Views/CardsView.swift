@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardsView: View {
     @EnvironmentObject var dataManager: NetworkManager
+    @State private var searchCard = ""
     
     var body: some View {
         List(dataManager.cards, id: \.id) { card in
@@ -30,6 +31,7 @@ struct CardsView: View {
             }
         }
         .navigationTitle("Cards")
+        .searchable(text: $searchCard)
     }
     
 }
