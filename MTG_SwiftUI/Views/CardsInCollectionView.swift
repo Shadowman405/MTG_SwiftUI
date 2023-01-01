@@ -13,7 +13,7 @@ struct CardsInCollectionView: View {
     @ObservedRealmObject var collection: CardCollectionUI
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(collection.cards){ card in
                     Text(card.name)
