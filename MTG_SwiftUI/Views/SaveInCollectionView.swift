@@ -13,7 +13,18 @@ struct SaveInCollectionView: View {
     
     var body: some View {
         List(collections, id: \.id){ collection in
+            HStack {
                 Text(collection.collectionName)
+                
+                Spacer()
+                
+                Button {
+                    print(collection.collectionName)
+                } label: {
+                    Image(systemName: "plus")
+                }
+
+            }
         }
 
     }
