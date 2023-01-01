@@ -33,6 +33,18 @@ struct CardDetailView: View {
             
         }
         .navigationTitle(card.name)
+        .toolbar{
+            ToolbarItem(placement: .navigationBarTrailing){
+                Button {
+                    
+                } label: {
+                    NavigationLink(destination: SaveInCollectionView()) {
+                        Image(systemName: "plus")
+                    }
+                }
+
+            }
+        }
     }
 }
 

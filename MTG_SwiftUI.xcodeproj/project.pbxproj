@@ -23,6 +23,7 @@
 		BFC732CE295B73D000C38248 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732CD295B73D000C38248 /* CardDetailView.swift */; };
 		BFC732D0295CE6F300C38248 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732CF295CE6F300C38248 /* CollectionsView.swift */; };
 		BFC732D2295FC52C00C38248 /* CardsInCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D1295FC52C00C38248 /* CardsInCollectionView.swift */; };
+		BFC732D42961DFBF00C38248 /* SaveInCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D32961DFBF00C38248 /* SaveInCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		BFC732CD295B73D000C38248 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		BFC732CF295CE6F300C38248 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
 		BFC732D1295FC52C00C38248 /* CardsInCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsInCollectionView.swift; sourceTree = "<group>"; };
+		BFC732D32961DFBF00C38248 /* SaveInCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInCollectionView.swift; sourceTree = "<group>"; };
 		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				BFC732CD295B73D000C38248 /* CardDetailView.swift */,
 				BFC732CF295CE6F300C38248 /* CollectionsView.swift */,
 				BFC732D1295FC52C00C38248 /* CardsInCollectionView.swift */,
+				BFC732D32961DFBF00C38248 /* SaveInCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */,
 				BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */,
+				BFC732D42961DFBF00C38248 /* SaveInCollectionView.swift in Sources */,
 				BFC732D0295CE6F300C38248 /* CollectionsView.swift in Sources */,
 				BFC732D2295FC52C00C38248 /* CardsInCollectionView.swift in Sources */,
 				BFC732BE2958ACC200C38248 /* Network Manager.swift in Sources */,
