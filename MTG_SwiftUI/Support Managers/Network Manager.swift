@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class NetworkManager: ObservableObject {
     
-    @Published var cards: [CardMTG] = []
+    @Published var cards: [CardMTGUI] = []
     
     static let shared = NetworkManager()
     let urlMTG = "https://api.magicthegathering.io/v1/cards?page=311"
@@ -21,13 +21,13 @@ class NetworkManager: ObservableObject {
     }
     
     
-    func fetchCards(url: String, with completion: @escaping ([CardMTG]) -> ()) {
+    func fetchCards(url: String, with completion: @escaping ([CardMTGUI]) -> ()) {
         //let url = "https://api.magicthegathering.io/v1/cards?page=311"
         
         AF.request(url, method: .get).validate().responseJSON { responseData in
             switch responseData.result {
             case .success(let value):
-                guard let cardData = CardMTG.getAllCards(from: value) else {return}
+                guard let cardData = CardMTGUI.getAllCards(from: value) else {return}
                 
                 DispatchQueue.main.async {
                     completion(cardData)

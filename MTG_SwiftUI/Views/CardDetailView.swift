@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardDetailView: View {
     @EnvironmentObject var dataManager: NetworkManager
-    var card: CardMTG
+    var card: CardMTGUI
     
     var body: some View {
         VStack {
@@ -50,7 +50,7 @@ struct CardDetailView: View {
 
 struct CardDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let cardOne = CardMTG()
+        let cardOne = CardMTGUI()
         
         CardDetailView(card: cardOne)
             .environmentObject(NetworkManager())
