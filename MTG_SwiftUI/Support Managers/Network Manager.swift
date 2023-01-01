@@ -14,7 +14,7 @@ class NetworkManager: ObservableObject {
     @Published var cards: [CardMTGUI] = []
     
     static let shared = NetworkManager()
-    var urlMTG = "https://api.magicthegathering.io/v1/cards?page=311"
+    var urlMTG = ""
     
     init() {
         fetchingCards(url: urlMTG)
@@ -39,9 +39,11 @@ class NetworkManager: ObservableObject {
     }
     
     func fetchingCards(url: String) {
+        cards.removeAll()
         fetchCards(url: urlMTG) { card in
             self.cards = card
         }
+        cards = cards.sorted{$0.name < $1.name}
     }
 }
 

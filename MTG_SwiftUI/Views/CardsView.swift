@@ -31,16 +31,19 @@ struct CardsView: View {
                 })
             }
         }
+        .onAppear{ loadData() }
         .navigationTitle("Cards")
         .searchable(text: $searchCard)
         .onChange(of: searchCard) { newValue in
             dataManager.urlMTG = "https://api.magicthegathering.io/v1/cards?name=\(newValue)"
-            print("https://api.magicthegathering.io/v1/cards?name=\(newValue)")
-            print(dataManager.cards.count)
-            dataManager.cards.shuffle()
+            dataManager.fetchingCards(url: "https://api.magicthegathering.io/v1/cards?name=\(newValue)")
         }
     }
     
+    func loadData() {
+        dataManager.urlMTG = "https://api.magicthegathering.io/v1/cards?page=311"
+        dataManager.fetchingCards(url: "https://api.magicthegathering.io/v1/cards?page=311")
+    }
 }
 
 struct CardsView_Previews: PreviewProvider {
