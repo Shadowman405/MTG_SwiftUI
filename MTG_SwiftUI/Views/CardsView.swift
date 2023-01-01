@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardsView: View {
     @EnvironmentObject var dataManager: NetworkManager
+    var cardsArray: [CardMTGUI] = []
     @State private var searchCard = ""
     
     var body: some View {
@@ -32,6 +33,12 @@ struct CardsView: View {
         }
         .navigationTitle("Cards")
         .searchable(text: $searchCard)
+        .onChange(of: searchCard) { newValue in
+            dataManager.urlMTG = "https://api.magicthegathering.io/v1/cards?name=\(newValue)"
+            print("https://api.magicthegathering.io/v1/cards?name=\(newValue)")
+            print(dataManager.cards.count)
+            dataManager.cards.shuffle()
+        }
     }
     
 }

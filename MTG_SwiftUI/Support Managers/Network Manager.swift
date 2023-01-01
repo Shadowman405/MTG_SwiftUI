@@ -14,7 +14,7 @@ class NetworkManager: ObservableObject {
     @Published var cards: [CardMTGUI] = []
     
     static let shared = NetworkManager()
-    let urlMTG = "https://api.magicthegathering.io/v1/cards?page=311"
+    var urlMTG = "https://api.magicthegathering.io/v1/cards?page=311"
     
     init() {
         fetchingCards(url: urlMTG)
