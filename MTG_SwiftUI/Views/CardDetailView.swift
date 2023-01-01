@@ -38,7 +38,7 @@ struct CardDetailView: View {
                 Button {
                     
                 } label: {
-                    NavigationLink(destination: SaveInCollectionView()) {
+                    NavigationLink(destination: SaveInCollectionView(card: card)) {
                         Image(systemName: "plus")
                     }
                 }
