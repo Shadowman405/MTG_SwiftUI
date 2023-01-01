@@ -64,4 +64,24 @@ final class CardMTGUI: Object, ObjectKeyIdentifiable {
     //@Persisted var id: String
     
     @Persisted(originProperty: "cards") var group: LinkingObjects<CardCollectionUI>
+    
+    convenience init?(cardData: [String: Any]) {
+        self.init()
+        
+        name = cardData["name"] as? String ?? ""
+        type = cardData["type"] as? String ?? ""
+        imageURL = cardData["imageUrl"] as? String ?? ""
+        originalType = cardData["originalType"] as? String ?? ""
+        //id = cardData["id"] as? String ?? ""
+        rarity = cardData["rarity"] as? String ?? ""
+        manaCost = cardData["manaCost"] as? String ?? ""
+        setName = cardData["setName"] as? String ?? ""
+        text = cardData["text"] as? String ?? ""
+    }
+    
+    static func getAllCards(from value: Any) -> [CardMTGUI]? {
+        guard let value = value as? [String: Any] else { return []}
+        guard let results = value["cards"] as? [[String: Any]] else {return []}
+        return results.compactMap { CardMTGUI(cardData: $0) }
+    }
 }
