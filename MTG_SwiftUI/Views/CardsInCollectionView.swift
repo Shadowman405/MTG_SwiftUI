@@ -16,7 +16,12 @@ struct CardsInCollectionView: View {
         NavigationStack {
             List {
                 ForEach(collection.cards){ card in
-                    Text(card.name)
+                    HStack {
+                        Text(card.name)
+                        NavigationLink(destination: CardDetailView(card: card)) {
+                            Text("")
+                        }
+                    }
                 }
                 .onMove(perform: $collection.cards.move)
                 .onDelete(perform: $collection.cards.remove)
