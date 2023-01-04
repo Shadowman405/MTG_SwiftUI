@@ -18,7 +18,7 @@ struct CardsInCollectionView: View {
                 ForEach(collection.cards){ card in
                     HStack {
                         Text(card.name)
-                        NavigationLink(destination: CardDetailView(card: card)) {
+                        NavigationLink(destination: CardDetailsFromCollection(card: card)) {
                             Text("")
                         }
                     }
