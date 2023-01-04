@@ -10,10 +10,7 @@ import RealmSwift
 
 struct SaveInCollectionView: View {
     @ObservedResults(CardCollectionUI.self) var collections
-    //@ObservedResults(CardMTGUI.self) var card
-    @ObservedRealmObject var card: CardMTGUI
-    @ObservedRealmObject var collToSave: CardCollectionUI
-    @Environment(\.realm) var realm
+    var card: CardMTGUI
     
     var body: some View {
         List(collections, id: \.id){ collection in
@@ -23,26 +20,30 @@ struct SaveInCollectionView: View {
                 Spacer()
                 
                 Button {
-                    $collToSave.cards.append(card)
+                    saveCard(collection: collection, card: card)
                     print(collection.collectionName)
                     print(card.name)
                     
                     
-//                    try? realm.write {
-//                        realm.add(collection.cards.append(card))
-//                    }
                 } label: {
                     Image(systemName: "plus")
                 }
-
             }
         }
 
+    }
+    
+    func saveCard(collection: CardCollectionUI, card: CardMTGUI) {
+        let realm = collection.realm!.thaw()
+        let thawedCollection = collection.thaw()!
+        try! realm.write {
+            thawedCollection.cards.append(card)
+        }
     }
 }
 
 struct SaveInCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SaveInCollectionView(card: CardMTGUI(), collToSave: CardCollectionUI())
+        SaveInCollectionView(card: CardMTGUI())
     }
 }
