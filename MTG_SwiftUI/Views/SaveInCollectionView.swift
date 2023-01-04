@@ -12,6 +12,7 @@ struct SaveInCollectionView: View {
     @ObservedResults(CardCollectionUI.self) var collections
     //@ObservedResults(CardMTGUI.self) var card
     @ObservedRealmObject var card: CardMTGUI
+    @ObservedRealmObject var collToSave: CardCollectionUI
     @Environment(\.realm) var realm
     
     var body: some View {
@@ -22,8 +23,10 @@ struct SaveInCollectionView: View {
                 Spacer()
                 
                 Button {
+                    $collToSave.cards.append(card)
                     print(collection.collectionName)
                     print(card.name)
+                    
                     
 //                    try? realm.write {
 //                        realm.add(collection.cards.append(card))
@@ -40,6 +43,6 @@ struct SaveInCollectionView: View {
 
 struct SaveInCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SaveInCollectionView(card: CardMTGUI())
+        SaveInCollectionView(card: CardMTGUI(), collToSave: CardCollectionUI())
     }
 }
