@@ -17,11 +17,16 @@ struct CollectionsView: View {
     var body: some View {
         NavigationView {
             List(collections, id: \.id){ collection in
-                HStack {
-                    Text(collection.collectionName)
+                ZStack {
+                    HStack {
+                        Text(collection.collectionName)
+                        Spacer()
+                        Text("60/\(collection.cards.count)")
+                    }
                     NavigationLink(destination: CardsInCollectionView(collection: collection)) {
                         Text("")
                     }
+                    .opacity(0)
                 }
             }
         }
