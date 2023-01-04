@@ -15,8 +15,8 @@ struct CardsInCollectionView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(collection.cards){ card in
-                    Section(header: Text("Main Deck")) {
+                Section(header: Text("Main Deck")) {
+                    ForEach(collection.cards){ card in
                         HStack {
                                 Text(card.name)
                                 NavigationLink(destination: CardDetailsFromCollection(card: card)) {
@@ -24,9 +24,9 @@ struct CardsInCollectionView: View {
                                 }
                         }
                     }
-                }
-                .onMove(perform: $collection.cards.move)
+                    .onMove(perform: $collection.cards.move)
                 .onDelete(perform: $collection.cards.remove)
+                }
             }
             .navigationBarTitle("Cards in " + collection.collectionName + " collection", displayMode: .inline)
             //.navigationBarBackButtonHidden(false)
