@@ -26,7 +26,7 @@ struct CardsInCollectionView: View {
                 .onMove(perform: $collection.cards.move)
                 .onDelete(perform: $collection.cards.remove)
             }
-            .navigationBarTitle("Cards in " + collection.collectionName, displayMode: .large)
+            .navigationBarTitle("Cards in " + collection.collectionName + " collection", displayMode: .inline)
             //.navigationBarBackButtonHidden(false)
             .navigationBarItems(trailing: EditButton())
         }
