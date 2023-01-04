@@ -16,10 +16,12 @@ struct CardsInCollectionView: View {
         NavigationStack {
             List {
                 ForEach(collection.cards){ card in
-                    HStack {
-                        Text(card.name)
-                        NavigationLink(destination: CardDetailsFromCollection(card: card)) {
-                            Text("")
+                    Section(header: Text("Main Deck")) {
+                        HStack {
+                                Text(card.name)
+                                NavigationLink(destination: CardDetailsFromCollection(card: card)) {
+                                    Text("")
+                                }
                         }
                     }
                 }
