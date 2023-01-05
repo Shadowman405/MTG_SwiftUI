@@ -25,7 +25,7 @@ struct CardsInCollectionView: View {
                         }
                     }
                     .onMove(perform: $collection.cards.move)
-                .onDelete(perform: $collection.cards.remove)
+                    .onDelete(perform: $collection.cards.remove)
                 }
             }
             .navigationBarTitle("Cards in " + collection.collectionName + " collection", displayMode: .inline)
