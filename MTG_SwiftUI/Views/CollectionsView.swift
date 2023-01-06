@@ -9,7 +9,6 @@ import SwiftUI
 import RealmSwift
 
 struct CollectionsView: View {
-    //@EnvironmentObject var dataManager: StorageManager
     @State private var presentAlert = false
     @State private var collectionName = ""
     @ObservedResults(CardCollectionUI.self) var collections
@@ -35,7 +34,7 @@ struct CollectionsView: View {
                 }
             }
         }
-        //.navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
         .listStyle(GroupedListStyle())
         .navigationBarTitle("Collections", displayMode: .large)
         .navigationBarItems(trailing: EditButton())
