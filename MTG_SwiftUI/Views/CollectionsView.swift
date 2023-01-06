@@ -32,6 +32,7 @@ struct CollectionsView: View {
                 .onDelete{
                     offset in $collections.remove(atOffsets: offset)
                 }
+                //.onMove(perform: $collections.move)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
