@@ -15,7 +15,7 @@ struct CollectionsView: View {
     @ObservedResults(CardCollectionUI.self) var collections
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(collections) {collection in
                     ZStack {
@@ -30,11 +30,14 @@ struct CollectionsView: View {
                         .opacity(0)
                     }
                 }
+                .onDelete{
+                    offset in $collections.remove(atOffsets: offset)
+                }
             }
         }
+        //.navigationViewStyle(StackNavigationViewStyle())
         .listStyle(GroupedListStyle())
         .navigationBarTitle("Collections", displayMode: .large)
-        //.navigationBarBackButtonHidden(false)
         .navigationBarItems(trailing: EditButton())
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
