@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HealthCounterView: View {
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             HpMiniView(color: .red)
+                .rotationEffect(.degrees(180))
             
             HpMiniView(color: .blue)
         }
