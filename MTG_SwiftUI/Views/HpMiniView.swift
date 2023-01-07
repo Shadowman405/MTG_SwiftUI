@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HpMiniView: View {
-    @State private var hp = 0
+    @State private var hp = 20
     @State private var showAlert = false
     @State var color = UIColor.red
  
@@ -33,11 +33,11 @@ struct HpMiniView: View {
                 
                 
                 Button {
-                    if hp != 0 {
-                        self.hp -= 1
-                    } else {
+                    if hp == 1 {
                         self.showAlert.toggle()
                         self.hp = 0
+                    } else {
+                        self.hp -= 1
                     }
                 } label: {
                     Text("-")
