@@ -40,7 +40,7 @@ struct ContentView: View {
                     .padding()
                     // To HP Counter
                     NavigationLink {
-                        CardsView()
+                        HealthCounterView()
                     } label: {
                         Text("Health Counter")
                             .foregroundColor(.orange)

@@ -25,6 +25,7 @@
 		BFC732D2295FC52C00C38248 /* CardsInCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D1295FC52C00C38248 /* CardsInCollectionView.swift */; };
 		BFC732D42961DFBF00C38248 /* SaveInCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D32961DFBF00C38248 /* SaveInCollectionView.swift */; };
 		BFC732D62966007000C38248 /* CardDetailsFromCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D52966007000C38248 /* CardDetailsFromCollection.swift */; };
+		BFC732D8296A10F000C38248 /* HealthCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D7296A10F000C38248 /* HealthCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		BFC732D1295FC52C00C38248 /* CardsInCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsInCollectionView.swift; sourceTree = "<group>"; };
 		BFC732D32961DFBF00C38248 /* SaveInCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInCollectionView.swift; sourceTree = "<group>"; };
 		BFC732D52966007000C38248 /* CardDetailsFromCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsFromCollection.swift; sourceTree = "<group>"; };
+		BFC732D7296A10F000C38248 /* HealthCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCounterView.swift; sourceTree = "<group>"; };
 		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				BFC732D1295FC52C00C38248 /* CardsInCollectionView.swift */,
 				BFC732D32961DFBF00C38248 /* SaveInCollectionView.swift */,
 				BFC732D52966007000C38248 /* CardDetailsFromCollection.swift */,
+				BFC732D7296A10F000C38248 /* HealthCounterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				BFC732AC2958A88B00C38248 /* ContentView.swift in Sources */,
 				BFC732D62966007000C38248 /* CardDetailsFromCollection.swift in Sources */,
 				BFC732CB2958C9FD00C38248 /* CardImage.swift in Sources */,
+				BFC732D8296A10F000C38248 /* HealthCounterView.swift in Sources */,
 				BFC732D42961DFBF00C38248 /* SaveInCollectionView.swift in Sources */,
 				BFC732D0295CE6F300C38248 /* CollectionsView.swift in Sources */,
 				BFC732D2295FC52C00C38248 /* CardsInCollectionView.swift in Sources */,
