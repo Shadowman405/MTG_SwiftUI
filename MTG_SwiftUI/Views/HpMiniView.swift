@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct HpMiniView: View {
-    @State var hp = 0
-    
+    @State private var hp = 0
+    @State private var showAlert = false
+ 
     var body: some View {
         ZStack {
             Color(.red)
             HStack {
                 Button {
-                    print("+")
+                    self.hp += 1
                 } label: {
                     Text("+")
                 }
@@ -23,11 +24,19 @@ struct HpMiniView: View {
                 Text("\(hp)")
                 
                 Button {
-                    print("-")
+                    if hp != 0 {
+                        self.hp -= 1
+                    } else {
+                        self.showAlert.toggle()
+                        self.hp = 0
+                    }
                 } label: {
                     Text("-")
                 }
             }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("You lose"), dismissButton: .default(Text("Cancel")))
         }
     }
 }
