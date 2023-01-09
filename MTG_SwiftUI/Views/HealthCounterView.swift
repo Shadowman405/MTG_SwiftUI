@@ -15,6 +15,13 @@ struct HealthCounterView: View {
             
             HpMiniView(color: .blue)
         }
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Button("Refresh") {
+                    print("refresh")
+                }
+            }
+        }
     }
 }
 
