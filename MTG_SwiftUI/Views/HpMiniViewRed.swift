@@ -11,7 +11,7 @@ protocol refreshHP {
     func refresh()
 }
 
-struct HpMiniView: View, refreshHP {
+struct HpMiniViewRed: View, refreshHP {
     @Binding var hp : Int
     @State private var showAlert = false
     @State var color = UIColor.red

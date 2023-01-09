@@ -12,10 +12,10 @@ struct HealthCounterView: View {
     
     var body: some View {
         VStack(spacing: 0){
-            HpMiniView(hp: $health, color: .red)
+            HpMiniViewRed(hp: $health, color: .red)
                 .rotationEffect(.degrees(180))
             
-            HpMiniView(hp: $health, color: .blue)
+            HpMiniViewRed(hp: $health, color: .blue)
         }
         .toolbar {
             ToolbarItem(placement: .automatic) {
