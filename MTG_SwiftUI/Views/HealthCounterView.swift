@@ -17,8 +17,10 @@ struct HealthCounterView: View {
         }
         .toolbar {
             ToolbarItem(placement: .automatic) {
-                Button("Refresh") {
-                    print("refresh")
+                Button{
+                    print("Refresh")
+                } label: {
+                    Image(systemName: "gobackward")
                 }
             }
         }
