@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct HpMiniView: View {
+protocol refreshHP {
+    func refresh()
+}
+
+struct HpMiniView: View, refreshHP {
     @State var hp = 20
     @State private var showAlert = false
     @State var color = UIColor.red
