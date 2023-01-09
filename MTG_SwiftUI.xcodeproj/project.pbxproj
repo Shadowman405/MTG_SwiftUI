@@ -27,6 +27,7 @@
 		BFC732D62966007000C38248 /* CardDetailsFromCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D52966007000C38248 /* CardDetailsFromCollection.swift */; };
 		BFC732D8296A10F000C38248 /* HealthCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D7296A10F000C38248 /* HealthCounterView.swift */; };
 		BFC732DA296A123E00C38248 /* HpMiniViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732D9296A123E00C38248 /* HpMiniViewRed.swift */; };
+		BFC732DC296CB94D00C38248 /* HpMiniViewBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC732DB296CB94D00C38248 /* HpMiniViewBlue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		BFC732D52966007000C38248 /* CardDetailsFromCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsFromCollection.swift; sourceTree = "<group>"; };
 		BFC732D7296A10F000C38248 /* HealthCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCounterView.swift; sourceTree = "<group>"; };
 		BFC732D9296A123E00C38248 /* HpMiniViewRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HpMiniViewRed.swift; sourceTree = "<group>"; };
+		BFC732DB296CB94D00C38248 /* HpMiniViewBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HpMiniViewBlue.swift; sourceTree = "<group>"; };
 		C8DF3F8BB7CA473D760F4128 /* Pods-MTG_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MTG_SwiftUI/Pods-MTG_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				BFC732D52966007000C38248 /* CardDetailsFromCollection.swift */,
 				BFC732D7296A10F000C38248 /* HealthCounterView.swift */,
 				BFC732D9296A123E00C38248 /* HpMiniViewRed.swift */,
+				BFC732DB296CB94D00C38248 /* HpMiniViewBlue.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				BFC732C02958ACE500C38248 /* Storage Network.swift in Sources */,
 				BFC732CE295B73D000C38248 /* CardDetailView.swift in Sources */,
 				BFC732C22958AD3D00C38248 /* AlertController.swift in Sources */,
+				BFC732DC296CB94D00C38248 /* HpMiniViewBlue.swift in Sources */,
 				BFC732AA2958A88B00C38248 /* MTG_SwiftUIApp.swift in Sources */,
 				BFC732BB2958AC6B00C38248 /* Collection.swift in Sources */,
 			);

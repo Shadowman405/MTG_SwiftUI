@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct HealthCounterView: View {
-    @State var health = 20
+    @State var healthRed = 20
+    @State var healthBlue = 20
     
     var body: some View {
         VStack(spacing: 0){
-            HpMiniViewRed(hp: $health, color: .red)
+            HpMiniViewRed(hp: $healthRed, color: .red)
                 .rotationEffect(.degrees(180))
             
-            HpMiniViewRed(hp: $health, color: .blue)
+            HpMiniViewBlue(hp: $healthBlue, color: .blue)
         }
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button{
                     print("Refresh")
-                    self.health = 20
+                    self.healthBlue = 20
+                    self.healthRed = 20
                 } label: {
                     Image(systemName: "gobackward")
                 }

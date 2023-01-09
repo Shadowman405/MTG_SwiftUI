@@ -1,17 +1,17 @@
 //
-//  HpMiniView.swift
+//  HpMiniViewBlue.swift
 //  MTG_SwiftUI
 //
-//  Created by Maxim Mitin on 7.01.23.
+//  Created by Maxim Mitin on 10.01.23.
 //
 
 import SwiftUI
 
-struct HpMiniViewRed: View {
+struct HpMiniViewBlue: View {
     @Binding var hp : Int
     @State private var showAlert = false
     @State var color = UIColor.red
- 
+    
     var body: some View {
         ZStack {
             Color(color)
@@ -52,16 +52,10 @@ struct HpMiniViewRed: View {
             Alert(title: Text("You lose"), dismissButton: .default(Text("Cancel")))
         }
     }
-
 }
 
-//struct HpMiniView_Previews: PreviewProvider {
-//    
-//    @State var testhp = 20
-//    
+//struct HpMiniViewBlue_Previews: PreviewProvider {
 //    static var previews: some View {
-//
-//        
-//        HpMiniView(hp: $testhp)
+//        HpMiniViewBlue()
 //    }
 //}
