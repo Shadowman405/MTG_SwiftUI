@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HpMiniView: View {
-    @State private var hp = 20
+    @State var hp = 20
     @State private var showAlert = false
     @State var color = UIColor.red
  
@@ -51,6 +51,10 @@ struct HpMiniView: View {
         .alert(isPresented: $showAlert) {
             Alert(title: Text("You lose"), dismissButton: .default(Text("Cancel")))
         }
+    }
+    
+    func refresh() {
+        hp = 20
     }
 }
 
