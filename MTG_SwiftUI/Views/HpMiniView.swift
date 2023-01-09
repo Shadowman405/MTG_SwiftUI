@@ -12,7 +12,7 @@ protocol refreshHP {
 }
 
 struct HpMiniView: View, refreshHP {
-    @State var hp = 20
+    @Binding var hp : Int
     @State private var showAlert = false
     @State var color = UIColor.red
  
@@ -62,8 +62,13 @@ struct HpMiniView: View, refreshHP {
     }
 }
 
-struct HpMiniView_Previews: PreviewProvider {
-    static var previews: some View {
-        HpMiniView()
-    }
-}
+//struct HpMiniView_Previews: PreviewProvider {
+//    
+//    @State var testhp = 20
+//    
+//    static var previews: some View {
+//
+//        
+//        HpMiniView(hp: $testhp)
+//    }
+//}
