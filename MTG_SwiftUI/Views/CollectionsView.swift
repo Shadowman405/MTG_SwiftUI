@@ -59,6 +59,7 @@ struct CollectionsView: View {
             }
             }
         }
+
     }
 }
 

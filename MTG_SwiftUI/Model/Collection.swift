@@ -21,3 +21,8 @@ final class CardCollectionUI: Object, ObjectKeyIdentifiable {
     @Persisted var collectionName = ""
     @Persisted var cards = RealmSwift.List<CardMTGUI>()
 }
+
+
+protocol Positionable {
+    var position: Int { get set }
+}
