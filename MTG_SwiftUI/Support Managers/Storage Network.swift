@@ -16,32 +16,32 @@ class StorageManager: ObservableObject {
     init() {}
     
     //MARK: - Save/delete collection
-    func save(cardCollection: [CardCollection]) {
-        write {
-            realm.add(cardCollection)
-        }
-    }
-    
-    func save(cardCollection: CardCollection) {
-        write {
-            realm.add(cardCollection)
-        }
-    }
-    
-    func delete(cardCollection: CardCollection) {
-        write {
-            realm.delete(cardCollection.cards)
-            realm.delete(cardCollection)
-        }
-    }
-    
-    //MARK: - Save CArd
-    
-    func save(card: CardMTG,in cardCollection: CardCollection){
-        write {
-            cardCollection.cards.append(card)
-        }
-    }
+//    func save(cardCollection: [CardCollection]) {
+//        write {
+//            realm.add(cardCollection)
+//        }
+//    }
+//    
+//    func save(cardCollection: CardCollection) {
+//        write {
+//            realm.add(cardCollection)
+//        }
+//    }
+//    
+//    func delete(cardCollection: CardCollection) {
+//        write {
+//            realm.delete(cardCollection.cards)
+//            realm.delete(cardCollection)
+//        }
+//    }
+//    
+//    //MARK: - Save CArd
+//    
+//    func save(card: CardMTG,in cardCollection: CardCollection){
+//        write {
+//            cardCollection.cards.append(card)
+//        }
+//    }
     
     
     private func write(_ completion: () -> Void) {
