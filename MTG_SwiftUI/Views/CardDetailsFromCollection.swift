@@ -29,7 +29,12 @@ struct CardDetailsFromCollection: View {
             
             Text("Set name: " + card.setName)
             Text("Card rarity: " + card.rarity)
-            Text("Mana Cost: " + card.manaCost)
+            HStack {
+                Text("Mana Cost: " + card.manaCost)
+                Image("G")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+            }
             Text("Description")
             Text(card.text)
             
