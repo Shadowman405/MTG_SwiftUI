@@ -51,4 +51,3 @@ class CardImageView: UIImageView {
         return nil
     }
 }
-
